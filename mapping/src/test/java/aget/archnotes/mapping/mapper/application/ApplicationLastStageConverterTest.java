@@ -10,8 +10,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mapstruct.factory.Mappers;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.Spy;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.UUID;
 class ApplicationLastStageConverterTest {
     @InjectMocks
     ApplicationLastStageConverter converter = Mappers.getMapper(ApplicationLastStageConverter.class);
-    @Mock
+    @Spy
     StageConverter stageConverter;
 
     @Test

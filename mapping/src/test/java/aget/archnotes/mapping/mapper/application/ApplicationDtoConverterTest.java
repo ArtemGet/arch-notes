@@ -10,8 +10,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mapstruct.factory.Mappers;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.UUID;
 class ApplicationDtoConverterTest {
     @InjectMocks
     ApplicationDtoConverter converter = Mappers.getMapper(ApplicationDtoConverter.class);
-    @Mock
+    @Spy
     StageConverter stageConverter;
 
     @Test
